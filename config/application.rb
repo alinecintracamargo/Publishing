@@ -11,6 +11,14 @@ module Publishing
     config.generators do |g|
       g.template_engine :railsui
       g.fallbacks[:railsui] = :erb
+      g.test_framework :rspec,
+                       fixtures: true,
+                       view_specs: true,
+                       helper_specs: true,
+                       routing_specs: false,
+                       controller_specs: false,
+                       request_specs: false
+      g.factory_bot dir: 'spec/factories'
     end
 
     config.to_prepare do
