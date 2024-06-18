@@ -11,11 +11,21 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
+ActiveRecord::Schema[7.1].define(version: 2024_06_18_124359) do
+
+
 ActiveRecord::Schema[7.1].define(version: 2024_06_18_123737) do
 
 ActiveRecord::Schema[7.1].define(version: 2024_06_18_113914) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accounts", force: :cascade do |t|
+    t.string "account_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -57,12 +67,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_18_113914) do
     t.datetime "updated_at", null: false
   end
 
-
   create_table "suppliers", force: :cascade do |t|
     t.string "supplier_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
