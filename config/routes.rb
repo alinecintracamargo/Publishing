@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources :assemblies
   resources :parts
 
 
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   resources :books
   resources :authors
   
+
 	get 'about', to: 'page#about'
   if Rails.env.development? || Rails.env.test?
     mount Railsui::Engine, at: "/railsui"
