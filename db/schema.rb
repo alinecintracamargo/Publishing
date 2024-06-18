@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
+ActiveRecord::Schema[7.1].define(version: 2024_06_18_125931) do
+
+
 ActiveRecord::Schema[7.1].define(version: 2024_06_18_124359) do
 
 
@@ -63,6 +66,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_18_113914) do
 
   create_table "books", force: :cascade do |t|
     t.datetime "publishing_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+
+  create_table "parts", force: :cascade do |t|
+    t.string "part_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
