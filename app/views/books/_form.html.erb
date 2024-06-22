@@ -6,6 +6,13 @@
     <%= form.datetime_field :publishing_at, class: "form-input" %>
   </div>
 
+  <div class="form-group">
+    <%= form.label :author_id, class: "form-label" %>
+    <%= form.collection_select(:author_id, Author.all, :id, :name, { prompt: true }, { class: "form-input" }) %>
+  </div>
+
+
+
   <div class="flex items-center justify-between flex-wrap">
     <div class="sm:flex-1 sm:mb-0 mb-6">
       <%= form.submit class: "btn btn-primary" %>
