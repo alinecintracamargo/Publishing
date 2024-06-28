@@ -58,6 +58,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem 'rails-controller-testing'
+  gem 'binding_of_caller'
 end
 
 group :development do
