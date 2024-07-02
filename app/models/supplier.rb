@@ -1,4 +1,4 @@
 class Supplier < ApplicationRecord
   has_one :account
-  validates :supplier_name, presence: true
+  has_many :parts
 end
