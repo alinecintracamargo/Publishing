@@ -8,6 +8,7 @@ class SuppliersController < ApplicationController
 
   # GET /suppliers/1 or /suppliers/1.json
   def show
+
   end
 
   # GET /suppliers/new
@@ -64,7 +65,9 @@ class SuppliersController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def supplier_params
-      params.require(:supplier).permit(:supplier_name)
-    end
+  private
+  # Only allow a list of trusted parameters through.
+  def supplier_params
+    params.require(:supplier).permit(:supplier_name)
+  end
 end
